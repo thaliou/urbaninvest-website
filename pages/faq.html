@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon formulaire</title>
+
+    <style>
+        body {
+            background-color: rgba(229, 238, 237, 0.921);
+            padding: 0;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .formulaire {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+
+        legend {
+            padding: 10px;
+            font-weight: bold;
+            font-variant: small-caps;
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            width: 100%;
+            height: auto;
+            margin: bottom 15px;
+            padding: 10px;
+        }
+
+        label {
+            margin:0 auto 12px 10px;
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+        }
+
+        input, select, textarea{
+            margin:0 0 12px 20px;
+            width: 50%;
+        }
+
+        .nom, .portable, .email, .sexe, .age, .question{
+            display: flex;
+            flex-direction: row;
+            margin-right: 20%;
+        }
+        
+        .checkbox-container  {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .checkbox-container div {
+            width: 23%;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 2px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <div class="formulaire">
+            <fieldset>
+                <legend> Contact </legend>
+                <div class="nom">
+                    <label for="nom"> Nom </label>
+                    <input type="text" placeholder="Aliou THIAM">
+                </div>
+                <div class="portable">
+                    <label for="portable"> Portable </label>
+                    <input type="text" placeholder="+221 7X XXX XX XX">
+                </div>
+                <div class="email">
+                    <label for="email"> Email</label>
+                    <input type="text" placeholder="aliousmanethiam@polytech.edu.sn">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend> Information Personnelles </legend>
+                <div class="age">
+                    <label for="age"> Age </label>
+                    <input type="number" placeholder="XX">
+                </div>
+                <div class="sexe">
+                    <label for="sexe"> Sexe </label>
+                    <select name="sexe" id="sexe">
+                        <option value="femme"> femme </option>
+                        <option value="homme"> homme </option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="reponse"> Pourquoi voulez vous participer a notre communaute ? </label>
+                    <textarea name="sareponse" id="reponse" rows="8" cols="25"></textarea>
+                </div>
+            </fieldset>
+            <fieldset class="aaa">
+                <legend> Choisissez vos bients a favori  </legend>
+                <div class="checkbox-container">
+                    <div><input type="checkbox"><label for="blackcat"> Chat Noir</label></div>
+                    <div><input type="checkbox"><label for="oenologie"> OEnologie </label></div>                         
+                    <div><input type="checkbox"><label for="bobar"> Bobar </label></div>
+                    <div><input type="checkbox"><label for="xpara"> X-Para </label></div>                    
+
+                    <div><input type="checkbox"><label for="khomiss"> Khomiss </label></div>                    
+                    <div><input type="checkbox"><label for="politix"> PolitiX </label></div>                    
+                    <div><input type="checkbox"><label for="binet-raid"> Binet Raid </label></div>                                    
+                    <div><input type="checkbox"><label for="xsoiree"> X-Soiree </label></div> 
+                </div>                       
+            </fieldset> 
+        </div>       
+    </form>
+</body>
+</html>

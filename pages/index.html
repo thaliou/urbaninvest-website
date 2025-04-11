@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanInvest - Accueil</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>    
+            <label class="logo">UrbanInvest</label>
+            <ul class="menu">
+                <li><a class="active" href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="about.html">À propos</a></li>
+           <!--     <li><a href="blog.html">Blog</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+           <!--    <li><a href="client-area.html">Espace Client</a></li> -->
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="presentation">
+        <h1>UrbanInvest Startup</h1>
+        <div class="presentation-content">
+            <div class="presentation-text">
+                <p>UrbanInvest est une startup spécialisée dans le marketing territorial et le conseil en acquisition foncière. 
+                    Elle propose une plateforme valorisant les territoires en présentant des projets urbains stratégiques aux investisseurs. 
+                    Son objectif est de rendre les villes durables et attractives tout en accompagnant particuliers et professionnels 
+                    dans le respect des réglementations urbanistiques. En reliant autorités, urbanistes et investisseurs, UrbanInvest facilite
+                     la prise de décision grâce à l’analyse des données foncières et immobilières, garantissant des investissements rentables et responsables.</p>
+                <a href="services.html" class="btn">Découvrir nos services</a>
+            </div>
+
+            <!-- Remplacement de l'image par une vidéo -->
+            <div class="video-container">
+                <video autoplay loop muted playsinline class="presentation-video" id="presentation-video">
+                    <source src="../images/WhatsApp Video 2025-02-06 at 02.18.04_d4c78e3d.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <button id="sound-button">🔇</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>À propos de nous</h2>
+                <p>UrbanInvest est une startup innovante spécialisée dans le marketing territorial et le conseil en acquisition foncière.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Liens rapides</h2>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contactez-nous</h2>
+                <p>Email: contact@urbaninvest.com</p>
+                <p>Téléphone: +33 1 23 45 67 89</p>
+                <p>Adresse: 123 Rue de l'Innovation, Paris, France</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 UrbanInvest | Conçu avec ❤️ par Aliou THIAM
+        </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

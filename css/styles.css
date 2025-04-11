@@ -1,0 +1,396 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat;
+}
+
+
+nav {
+    background: rgb(4, 110, 11);
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 80px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: rgb(99, 241, 118);
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 880px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(89, 169, 89);
+        top: 80px;
+        left: -100%;
+        transition: all .5s;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover, a.active {
+        background: none;
+        color: rgb(132, 215, 132);
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .no-scroll {
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    
+}
+
+section {
+    background: url(https://img.freepik.com/photos-premium/plan-architecture-feuille-papier-dessine-main-structure-treillis-croquis-au-crayon-design-par_12860-671.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    height: auto; /* La section s'adapte au contenu */
+    padding-bottom: 20px; /* Ajoute un espacement en bas */
+}
+
+.presentation-content {
+    display: inline-flex;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    top: 500px;
+    justify-content: space-between;
+}
+
+.presentation h1 {
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 120px; 
+}
+
+.presentation-content img {
+    float: inline-end;
+    max-width: 50%;
+    width: 45%;
+    height: auto;
+}
+
+.presentation-text {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    height: auto; 
+    text-align: center;
+    font-size: large;
+    color: #333; /* Couleur plus foncée */
+    padding: 20px; /* Espacement intérieur */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre du texte */
+    animation: fadeIn 2s ease-in-out; /* Animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.presentation a {
+    background-color: green;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Styles généraux pour le footer */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 880px) {
+    .footer-section {
+        width: 100%; /* Chaque section occupe toute la largeur */
+        text-align: center; /* Centre le contenu */
+        margin-top: 20px; /* Ajoute un espacement entre les sections */
+    }
+
+    .footer-section.links ul li {
+        display: block; /* Affiche les liens en colonne */
+        margin: 10px 0; /* Ajoute un espacement entre les liens */
+    }
+}
+
+.presentation-content {
+    display: inline-flex;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    top: 500px;
+    justify-content: space-between;
+}
+
+.presentation-text {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    height: auto; 
+    text-align: center;
+    font-size: large;
+    color: #333; /* Couleur plus foncée */
+    padding: 20px; /* Espacement intérieur */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre du texte */
+    animation: fadeIn 2s ease-in-out; /* Animation */
+}
+
+.presentation a {
+    background-color: green;
+    display: block;
+    text-align: center;
+    margin: 20px auto; /* Marge pour espacer du texte */
+    width: 200px;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none; /* Supprime le soulignement */
+    transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+.presentation a:hover {
+    background-color: darkgreen; /* Changement de couleur au survol */
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 880px) {
+    section {
+        height: auto; /* La section s'adapte au contenu */
+        padding: 20px 0; /* Ajoute un espacement */
+    }
+
+    .presentation-content {
+        flex-direction: column; /* Empile le texte et l'image */
+        align-items: center; /* Centre le contenu */
+        padding: 10px; /* Réduit l'espacement */
+    }
+
+    .presentation-text {
+        width: 100%; /* Occupe toute la largeur */
+        padding: 10px; /* Réduit l'espacement */
+    }
+
+    .presentation-content img {
+        width: 100%; /* L'image occupe toute la largeur */
+        max-width: 100%; /* Empêche l'image de dépasser */
+        height: auto; /* Maintient les proportions */
+        margin-top: 20px; /* Espace entre le texte et l'image */
+    }
+
+    .presentation a {
+        margin: 20px auto; /* Centre le bouton */
+    }
+}
+
+.presentation-content {
+    display: inline-flex;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center; /* Centre la vidéo et le texte verticalement */
+}
+
+.presentation-video {
+    width: 45%; /* Largeur de la vidéo */
+    max-width: 100%; /* Empêche la vidéo de dépasser */
+    height: auto; /* Maintient les proportions */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+@media (max-width: 880px) {
+    .presentation-content {
+        flex-direction: column; /* Empile le texte et la vidéo */
+    }
+
+    .presentation-video {
+        width: 100%; /* La vidéo occupe toute la largeur */
+        margin-top: 20px; /* Espace entre le texte et la vidéo */
+    }
+}
+
+.video-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Le conteneur remplit la largeur disponible */
+    max-width: 800px; /* Limite la largeur maximale (ajustez selon vos besoins) */
+    margin: 0 auto; /* Centre le conteneur */
+}
+
+.presentation-video {
+    width: 100%; /* La vidéo remplit la largeur du conteneur */
+    height: auto; /* Maintient les proportions */
+    aspect-ratio: 16 / 9; /* Pour un format 16:9 (ajustez selon vos besoins) */
+    max-width: 100%; /* Empêche la vidéo de dépasser */
+}
+
+#sound-button {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles pour le titre de la page d'accueil */
+.presentation h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #046e0b;
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
+}
+
+
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de test</title>
+</head>
+<body>
+
+    <h2>Formulaire de test</h2>
+
+    <form id="formulaireTest">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom"><br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email"><br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+
+    <script>
+        // Ajout de l'écouteur d'événement sur le formulaire
+        document.getElementById("formulaireTest").addEventListener("submit", function(event) {
+            // Empêcher la soumission du formulaire (rechargement de la page)
+            event.preventDefault();
+            
+            // Récupérer les données du formulaire
+            let nom = document.getElementById("nom").value;
+            let email = document.getElementById("email").value;
+
+            // Afficher les données dans une alerte
+            alert("Nom: " + nom + "\nEmail: " + email);
+        });
+    </script>
+
+</body>
+</html>
